@@ -1,0 +1,302 @@
+
+:root {
+    --blue-grey: #202c31;
+    --dark-grey: #16181a;
+    --black: black;
+    --blue-highlight: #00ccff;
+    --light-blue: #8fd7e9;
+    --white: white;
+}
+
+
+body {
+	color: var(--white);
+	background: var(--black);
+}
+a {
+	color: var(--white);
+}
+a:hover, a:focus {
+	color: var(--blue-highlight);
+}
+strong {
+	color: var(--blue-highlight);
+}
+
+
+/* Enleve car ca fait mon design laid*/
+/* Conteneur central */
+/* #centre {
+	background: url(images/11-colgauche.png) repeat-y left top;
+}
+#centre-bis {
+	background: url(images/11-coldroite.png) repeat-y right top;
+} */
+
+/* Navigation */
+/* Ajout de bordure pour design*/
+#navigation {
+	background: var(--blue-grey);
+    border: var(--white) solid 1px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px;
+}
+#navigation a {
+	color: var(--blue-highlight);
+}
+#navigation a:hover, #navigation a:focus {
+	background: #000000;
+}
+
+/* Contenu principal */
+/* Ajout de bordure pour design*/
+#principal {
+	color: var(--white);
+	background: var(--dark-grey);
+    border: var(--white) solid 1px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px;
+}
+#principal a {
+	color: #332510;
+}
+#principal a:hover, #principal a:focus {
+	color: var(--light-blue);
+}
+#principal strong {
+	color: var(--blue-highlight);
+}
+
+/* Contenu secondaire */
+/* Ajout de bordure pour design*/
+#secondaire {
+	background: var(--blue-grey);
+    border: var(--white) solid 1px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px;
+}
+
+
+
+/* --- POSITIONNEMENT --- */
+
+/* Page */
+body {
+	padding: 20px 5px;
+}
+#global {
+	width: 90%;
+	max-width: 90em;
+	min-width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* En-tÃªte */
+/* Ajout de flex column*/
+#entete {
+	padding: 20px 0;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+#entete h1 {
+	margin: 0;
+}
+#entete h1 img {
+	float: left;
+	margin: 7px 20px 10px 0;
+}
+#entete .sous-titre {
+	margin: 4px 0 15px 0;
+}
+
+#principal h3 {
+    text-transform: uppercase;
+}
+
+/* Bloc central */
+#centre-bis {
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Menu de navigation */
+/* ajustement de la hauteur a 100vh */
+#navigation {
+	float: left;
+	width: 180px;
+    height: 100vh;
+}
+
+#navigation ul {
+	margin: 0;
+	padding: 20px 10px 20px 10px;
+	list-style: none;
+}
+#navigation a {
+	display: block;
+	height: 1%;
+	padding: 6px 10px 6px 10px;
+	line-height: 1.5;
+	font-size: .9em;
+	text-decoration: none;
+}
+
+/* Contenu principal */
+/* ajout de flexbox pour centrer mes images */
+/* ajustement de la hauteur a 100vh */
+#principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	margin-left: 200px;
+	margin-right: 260px;
+	padding: 10px 20px;
+    min-height: 100vh;
+}
+
+
+/* ajouts de ce selector pour faire les images plus belles */
+#principal img {
+    margin: 10px 0px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: white solid 2px;
+    box-shadow: 10px 10px 20px black;
+}
+
+#principal > :first-child {
+	margin-top: 10px;
+}
+#principal p, #principal li {
+	line-height: 1.5;
+}
+
+/* Contenu secondaire */
+/* ajustement de la hauteur a 100vh */
+#secondaire {
+	float: right;
+	width: 200px;
+	padding: 12px 20px;
+    height: 100vh;
+}
+
+/* Pied de page */
+#pied {
+	margin: 0;
+	padding: 15px 260px 10px 200px;
+	font-size: .85em;
+}
+
+/* Mention de copyright */
+#copyright {
+	margin: 8px 0 0 0;
+	font-size: 1em;
+	text-align: left;
+}
+
+
+/* Ajout pour logo de montmorency*/
+#logo {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Ajout de tableau*/
+table {
+    color: white;
+    font-size: 1rem;
+    margin: 50px 0px;
+    box-shadow: 10px 10px 10px black;
+    border-collapse: collapse;
+    border: 2px solid white;
+}
+
+th[scope=col] {
+    background-color: var(--blue-grey);
+    text-shadow: 0px 0px 10px;
+    text-transform: uppercase;
+}
+
+th[scope=row], td {
+    background-color: rgb(14, 11, 11);
+    padding: 10px 20px;
+    border: 1px solid white;
+}
+
+td {
+    text-align: right;
+}
+
+/*Conclusion*/
+
+ul {
+    list-style: upper-alpha;
+}
+
+/* Animation*/
+
+#hide {
+    position: absolute;
+    background-color: #000000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: background 10s;
+    
+}
+
+#hide:target {
+    background: 0, 0, 0, .75;
+    z-index: 1;
+}
+
+.popup {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    
+}
+
+
+
+.popup a::after {
+    right: 100%;
+    top: 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #BF2E97;
+    color: #fff;
+    content: "×";
+    cursor: pointer;
+    opacity: 0;
+    animation: 1s fadeIn ease forwards 0.5s;
+    transition: 100ms cubic-bezier(0.2, 0.2, 1, 1);
+}
+
+.image {
+    width: 800px;
+    height: 500px;
+}
+
+#hide:target ~ .popup {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
