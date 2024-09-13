@@ -21,6 +21,7 @@ a:hover, a:focus {
 }
 strong {
 	color: var(--blue-highlight);
+    text-shadow: var(--blue-highlight) 0px 0px 10px;
 }
 
 
@@ -111,8 +112,10 @@ body {
 	margin: 4px 0 15px 0;
 }
 
+/* pour le design */
 #principal h3 {
     text-transform: uppercase;
+    text-shadow: 0px 0px 10px;
 }
 
 /* Bloc central */
@@ -237,8 +240,10 @@ ul {
     list-style: upper-alpha;
 }
 
-/* Animation*/
 
+
+
+/* Boutton pour fermer*/
 .close-button {
     right: 0;
     top: 0;
@@ -260,6 +265,7 @@ ul {
     
   }
   
+  /* background noir*/
   .backdrop {
     position: fixed;
     top: 0;
@@ -272,6 +278,7 @@ ul {
     opacity: 0;
   }
   
+  /* Container pour l'image de popup*/
   .container {
     position: fixed;
     top: 50%;
@@ -283,16 +290,19 @@ ul {
     
   }
   
+  /* Afficher image quand click*/
   :target {
     display: block;
   }
   
+  /* Background noir*/
   :target ~ .backdrop {
     display: block;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
   }
   
+  /* Image de popup*/
   .image {
     max-width: 500px;
     border-radius: 10% 0% 10% 10%;
@@ -300,7 +310,7 @@ ul {
   }
   
   
-  
+  /* Animation*/
   @keyframes slideIn {
     0% {
       transform: translate(-50%, -50%) scale(0.8);
@@ -313,3 +323,32 @@ ul {
       border-radius: 10%;
     }
   }
+
+  /* hide before hover */
+  .nav {
+    display: none;
+    animation: forwards;
+  }
+
+  /* remove padding */
+  #navigation .nav {
+    padding: 0px 0px 0px 10px;
+  }
+
+  /* sub-menu */
+  #navigation .nav li a {
+    color: var(--light-blue);
+    text-shadow: var(--light-blue) 0px 0px 10px;
+  }
+
+  /* effet hover */
+  .nav-bar:hover {
+    
+    ul.nav {
+        display: block;
+        padding: 0;
+        margin: 0;
+    } 
+  }
+
+  
